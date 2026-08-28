@@ -1,110 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Md. Mahade Hasan</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f8f9fa;
-        color: #333;
-      }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      .profile {
-        text-align: center;
-        margin-bottom: 40px;
-      }
-      .profile img {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      .profile h1 {
-        font-size: 36px;
-        margin-bottom: 10px;
-        color: #007bff; /* Blue color */
-      }
-      .profile p {
-        font-size: 18px;
-        margin-bottom: 20px;
-        line-height: 1.6;
-      }
-      .social-links {
-        margin-top: 20px;
-      }
-      .social-links a {
-        color: #555;
-        text-decoration: none;
-        margin: 0 10px;
-        font-size: 20px;
-        transition: color 0.3s ease;
-      }
-      .social-links a:hover {
-        color: #007bff;
-      }
-      .about-me {
-        background-color: #fff;
-        border-radius: 8px;
-        padding: 30px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      .about-me h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
-        color: #007bff; /* Blue color */
-      }
-      .about-me p {
-        font-size: 16px;
-        line-height: 1.6;
-        margin-bottom: 15px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="profile">
-        <img src="profile-pic.jpg" alt="Profile Picture" />
-        <h1>MAHADE HASAN</h1>
-        <p>Software Engineer</p>
-        <div class="social-links">
-          <a
-            href="https://www.linkedin.com/in/md-mahade-hasan2003"
-            target="_blank"
-            >LinkedIn</a
-          >
-          <a href="https://www.facebook.com/snithik.pritho" target="_blank"
-            >Facebook</a
-          >
-          <a
-            href="https://codeforces.com/profile/mehedihasanmonshe"
-            target="_blank"
-            >Codeforces</a
-          >
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Md. Mahade Hasan — CS Undergraduate &amp; Competitive Programmer</title>
+<meta name="description" content="Portfolio of Md. Mahade Hasan — CSE undergraduate at BUBT, competitive programmer, CP instructor, and AI/ML enthusiast." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,3 93,25 93,75 50,97 7,75 7,25' fill='none' stroke='%2300f0ff' stroke-width='5'/%3E%3Ctext x='50' y='62' font-size='40' text-anchor='middle' fill='%2300f0ff' font-family='monospace'%3EM%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loader-text mono">INITIALIZING PORTFOLIO_SYSTEM.EXE</div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <canvas id="bg-canvas"></canvas>
+  <div class="grid-overlay"></div>
+  <div class="scanline-overlay"></div>
+
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo">MAHADE<span>.HASAN</span><span class="cursor"></span></a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#publications">Research</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="hero-eyebrow"><span class="dot"></span> AVAILABLE FOR OPPORTUNITIES</div>
+          <h1>Hi, I'm <span class="grad">Md. Mahade Hasan</span></h1>
+          <div class="hero-role mono">&gt; <span class="typed" id="typedText"></span><span class="caret"></span></div>
+          <p class="hero-desc">
+            CSE undergraduate at BUBT with 2+ years in competitive programming and a strong
+            foundation in DSA. I love breaking down hard problems, teaching peers, and
+            building toward research in AI/ML.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="stat-num"><span>3.94</span></div>
+              <div class="stat-label">CGPA</div>
+            </div>
+            <div>
+              <div class="stat-num"><span>1045</span></div>
+              <div class="stat-label">CF Max Rating</div>
+            </div>
+            <div>
+              <div class="stat-num"><span>2+</span></div>
+              <div class="stat-label">Years in CP</div>
+            </div>
+            <div>
+              <div class="stat-num"><span>5+</span></div>
+              <div class="stat-label">Projects</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="avatar-ring">
+            <div class="avatar-core">
+              <img src="profile-pic.jpg" alt="Md. Mahade Hasan" />
+            </div>
+            <div class="hero-tag-chip c1 mono">BIUPC Champion</div>
+            <div class="hero-tag-chip c2 mono">CP Instructor</div>
+            <div class="hero-tag-chip c3 mono">AI/ML</div>
+          </div>
         </div>
       </div>
+      <div class="scroll-cue mono"><span class="line"></span>SCROLL</div>
+    </section>
 
-      <div class="about-me">
-        <h2>About Me</h2>
-        <p>
-          I'm a passionate web developer with a strong foundation in front-end
-          and back-end development. I have a keen eye for design and enjoy
-          creating user-friendly interfaces. My goal is to leverage my skills to
-          build innovative web solutions that make a positive impact.
-        </p>
-        <p>
-          When I'm not coding, you can find me exploring new technologies,
-          reading tech blogs, or hiking in the great outdoors.
-        </p>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-tag">About</div>
+          <h2 class="section-title">Who I Am</h2>
+        </div>
+        <div class="about-grid">
+          <div class="panel about-card reveal">
+            <div class="role">Undergrad CSE Student @ BUBT</div>
+            <p>
+              I have over two years of experience in competitive programming, with a strong
+              focus on Data Structures &amp; Algorithms. I enjoy explaining problem-solving
+              techniques and helping peers understand complex concepts.
+            </p>
+            <p>
+              I'm interested in contributing to teaching and academic environments while
+              continuing to build my knowledge in AI/ML for research — currently working on
+              two research efforts alongside my coursework.
+            </p>
+            <div class="stat-grid">
+              <div class="panel stat-box">
+                <div class="stat-num">3.94</div>
+                <div class="stat-label">CGPA (5th Sem)</div>
+              </div>
+              <div class="panel stat-box">
+                <div class="stat-num">1045</div>
+                <div class="stat-label">Codeforces Max</div>
+              </div>
+              <div class="panel stat-box">
+                <div class="stat-num">7</div>
+                <div class="stat-label">Contest Podiums</div>
+              </div>
+              <div class="panel stat-box">
+                <div class="stat-num">2</div>
+                <div class="stat-label">Research Papers</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-list reveal">
+            <div class="panel info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-9-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 10-9 10Z"/></svg>
+              <div><div class="label">Focus</div><div class="value">Competitive Programming · DSA · AI/ML</div></div>
+            </div>
+            <div class="panel info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              <div><div class="label">Institution</div><div class="value">Bangladesh University of Business &amp; Technology</div></div>
+            </div>
+            <div class="panel info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+              <div><div class="label">Role</div><div class="value">CP Instructor, CP Community – BUBT</div></div>
+            </div>
+            <div class="panel info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 22h20L12 2Z"/></svg>
+              <div><div class="label">Location</div><div class="value">Mirpur, Dhaka, Bangladesh</div></div>
+            </div>
+            <div class="panel info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18"/></svg>
+              <div><div class="label">Soft Skills</div><div class="value">Communication · Leadership · Teamwork</div></div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-tag">Academic Path</div>
+          <h2 class="section-title">Education</h2>
+        </div>
+        <div class="timeline reveal">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="panel tl-card">
+              <span class="tl-date mono">JAN 2024 — PRESENT</span>
+              <h3>B.Sc. Engineering in CSE</h3>
+              <div class="tl-org">Bangladesh University of Business &amp; Technology (BUBT)</div>
+              <div class="tl-meta">Rupnagar, Mirpur-2, Dhaka</div>
+              <span class="tl-score">CGPA: 3.94 · Current, 5th Semester</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="panel tl-card">
+              <span class="tl-date mono">APR 2020 — APR 2022</span>
+              <h3>Higher Secondary Certificate (HSC)</h3>
+              <div class="tl-org">New Model Degree College</div>
+              <div class="tl-meta">Dhanmondi-32, Dhaka</div>
+              <span class="tl-score">GPA: 4.50 / 5.00</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="panel tl-card">
+              <span class="tl-date mono">JAN 2015 — JAN 2020</span>
+              <h3>Secondary School Certificate (SSC)</h3>
+              <div class="tl-org">Khalla High School</div>
+              <div class="tl-meta">Khalla, Bancharampur, Brahmanbaria</div>
+              <span class="tl-score">GPA: 4.56 / 5.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-tag">Toolkit</div>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+        </div>
+        <div class="skills-grid reveal">
+          <div class="panel skill-cat">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Programming</h3>
+            <div class="chip-row">
+              <span class="chip">C / C++</span><span class="chip">Python</span><span class="chip">Java</span><span class="chip">Bash</span>
+            </div>
+          </div>
+          <div class="panel skill-cat">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>Core Knowledge</h3>
+            <div class="chip-row">
+              <span class="chip">OOP</span><span class="chip">Data Structures</span><span class="chip">Algorithms</span><span class="chip">Competitive Programming</span><span class="chip">Desktop Apps (Java/Python)</span>
+            </div>
+          </div>
+          <div class="panel skill-cat">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Tools</h3>
+            <div class="chip-row">
+              <span class="chip">VS Code</span><span class="chip">IntelliJ IDEA</span><span class="chip">Code::Blocks</span><span class="chip">Google Colab</span><span class="chip">Overleaf</span>
+            </div>
+          </div>
+          <div class="panel skill-cat">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 4 5-8"/></svg>Data &amp; ML (Basic)</h3>
+            <div class="chip-row">
+              <span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span>
+            </div>
+          </div>
+          <div class="panel skill-cat">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>Soft Skills</h3>
+            <div class="chip-row">
+              <span class="chip">Communication</span><span class="chip">Presentation</span><span class="chip">Teamwork</span><span class="chip">Leadership</span><span class="chip">Problem Solving</span><span class="chip">Time Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-tag">Track Record</div>
+          <h2 class="section-title">Experience</h2>
+        </div>
+        <div class="timeline reveal">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="panel tl-card">
+              <span class="tl-date mono">FALL 2025</span>
+              <h3>CP Instructor</h3>
+              <div class="tl-org">CP Community — BUBT</div>
+              <div class="tl-meta">Teaching problem-solving techniques and DSA fundamentals to peers, guiding contest preparation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-tag">Selected Work</div>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-sub">A mix of course, competition, and lab projects across systems, data, and applied programming.</p>
+        </div>
+        <div class="project-grid reveal">
+
+          <div class="panel project-card">
+            <div class="project-top">
+              <div class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M8 20h8"/></svg>
+              </div>
+              <span class="project-date mono">2024 – 2025</span>
+            </div>
+            <h3>CampusCore — Smart Campus Eco-System</h3>
+            <p class="project-desc">A multi-course initiative to build a unified campus management ecosystem, implemented across three different labs with different tech stacks.</p>
+            <div class="project-variants">
+              <div class="project-variant"><b>SDP-100 build</b> — C/C++, file-based storage (Fall 2024)</div>
+              <div class="project-variant"><b>Database Lab build</b> — Python, MySQL (Fall 2025)</div>
+              <div class="project-variant"><b>Java Lab build</b> — Java Swing, file-based storage (Fall 2025)</div>
+            </div>
+            <div class="project-tags"><span class="tag">C/C++</span><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">Java Swing</span></div>
+          </div>
+
+          <div class="panel project-card">
+            <div class="project-top">
+              <div class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 22v-6M4.2 4.2l4.2 4.2M15.6 15.6l4.2 4.2M2 12h6M16 12h6M4.2 19.8l4.2-4.2M15.6 8.4l4.2-4.2"/></svg>
+              </div>
+              <span class="project-date mono">FALL 2025</span>
+            </div>
+            <h3>Agro360 — Smart Farming App</h3>
+            <p class="project-desc">SDP-200 project idea-pitch winner: an application concept helping farmers manage crops, resources, and data-driven decisions.</p>
+            <div class="project-tags"><span class="tag">Python</span><span class="tag">MySQL</span></div>
+          </div>
+
+          <div class="panel project-card">
+            <div class="project-top">
+              <div class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+              </div>
+              <span class="project-date mono">SPRING 2024</span>
+            </div>
+            <h3>Employee Management System</h3>
+            <p class="project-desc">System Analysis lab project that streamlined employee records and workflows with a full web stack.</p>
+            <div class="project-tags"><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">Django</span><span class="tag">MongoDB</span></div>
+          </div>
+
+        </div>
+        <div class="projects-more reveal">
+          <a href="https://github.com/snithik2003" target="_blank" rel="noopener" class="btn btn-ghost">
+            View More on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-tag">Milestones</div>
+          <h2 class="section-title">Achievements</h2>
+        </div>
+        <div class="ach-grid reveal">
+          <div class="panel ach-card">
+            <div class="ach-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4a2 2 0 0 0 2 4M17 6h3a2 2 0 0 1-2 4"/></svg></div>
+            <div><h4>BIUPC Champion — Fall 2024</h4><p>BUBT Intra-University Programming Contest, Junior Division.</p></div>
+          </div>
+          <div class="panel ach-card">
+            <div class="ach-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4a2 2 0 0 0 2 4M17 6h3a2 2 0 0 1-2 4"/></svg></div>
+            <div><h4>SDP-100 Champion — Fall 2024</h4><p>Software Development Project idea-pitching competition.</p></div>
+          </div>
+          <div class="panel ach-card">
+            <div class="ach-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4a2 2 0 0 0 2 4M17 6h3a2 2 0 0 1-2 4"/></svg></div>
+            <div><h4>SDP-200 Champion — Fall 2025</h4><p>Software Development Project idea-pitching competition.</p></div>
+          </div>
+          <div class="panel ach-card">
+            <div class="ach-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4a2 2 0 0 0 2 4M17 6h3a2 2 0 0 1-2 4"/></svg></div>
+            <div><h4>Ensemble Mode Champion — Fall 2024</h4><p>Discrete Mathematics Ensemble Mode competition.</p></div>
+          </div>
+          <div class="panel ach-card">
+            <div class="ach-icon silver"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg></div>
+            <div><h4>BIUPC 3rd Runner-up — Spring 2025</h4><p>BUBT Intra-University Programming Contest, Junior Division.</p></div>
+          </div>
+          <div class="panel ach-card">
+            <div class="ach-icon silver"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg></div>
+            <div><h4>13th in BIUPC — Spring 2024</h4><p>BUBT Intra-University Programming Contest, Junior Division.</p></div>
+          </div>
+          <div class="panel ach-card">
+            <div class="ach-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 4 5-8"/></svg></div>
+            <div><h4>Codeforces Max Rating — 1045</h4><p>Peak competitive rating achieved on Codeforces.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-tag">Credentials</div>
+          <h2 class="section-title">Certifications &amp; Workshops</h2>
+        </div>
+        <div class="cert-list reveal">
+          <div class="panel cert-row">
+            <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
+            <div><h4>AI/ML with Phitron</h4><span>Phitron</span></div>
+          </div>
+          <div class="panel cert-row">
+            <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
+            <div><h4>Phitron CSE Fundamental</h4><span>Phitron</span></div>
+          </div>
+          <div class="panel cert-row">
+            <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
+            <div><h4>Web Development with Django</h4><span>Phitron</span></div>
+          </div>
+          <div class="panel cert-row">
+            <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
+            <div><h4>Mikrotik Professional Network Administrator Workshop</h4><span>BUBT TAFE</span></div>
+          </div>
+          <div class="panel cert-row">
+            <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
+            <div><h4>ODoo Development Workshop</h4><span>BUBT TAFE</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-tag">Research</div>
+          <h2 class="section-title">Publications &amp; Research Work</h2>
+        </div>
+        <div class="pub-list reveal">
+          <div class="panel pub-card">
+            <span class="pub-status review mono">UNDER REVIEW</span>
+            <h3>A Review of AI, Machine Learning and Deep Learning for Liver Cancer Detection and Analysis</h3>
+            <p>Submitted to the 2026 5th IEEE International Conference on Robotics, Automation, Artificial-Intelligence and Internet-of-Things. Supervised by <span class="pub-sup">Most. Jannatul Ferdous</span>, Department of CSE, BUBT.</p>
+          </div>
+          <div class="panel pub-card">
+            <span class="pub-status progress mono">IN PROGRESS</span>
+            <h3>Secured Data Drifting Hierarchical Federated Learning</h3>
+            <p>Ongoing research under the supervision of <span class="pub-sup">Mr. Shamim Ahmed</span>, Department of CSE, BUBT.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-tag">Get In Touch</div>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-sub">Open to internships, research collaborations, and interesting conversations about CP, AI/ML, or teaching.</p>
+        </div>
+        <div class="contact-grid reveal">
+          <div class="contact-links">
+            <a href="mailto:mehedihasanmonshe@gmail.com" class="panel contact-link">
+              <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div>
+              <div class="c-text"><div class="c-label">Email</div><div class="c-value">mehedihasanmonshe@gmail.com</div></div>
+            </a>
+            <a href="https://linkedin.com/in/snithik1" target="_blank" rel="noopener" class="panel contact-link">
+              <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v1.5A5.98 5.98 0 0 1 16 8Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+              <div class="c-text"><div class="c-label">LinkedIn</div><div class="c-value">linkedin.com/in/snithik1</div></div>
+            </a>
+            <a href="https://github.com/snithik2003" target="_blank" rel="noopener" class="panel contact-link">
+              <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></div>
+              <div class="c-text"><div class="c-label">GitHub</div><div class="c-value">github.com/snithik2003</div></div>
+            </a>
+            <a href="https://codeforces.com/profile/mehedihasanmonshe" target="_blank" rel="noopener" class="panel contact-link">
+              <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="5" height="12" rx="1"/><rect x="9.5" y="4" width="5" height="17" rx="1"/><rect x="17" y="12" width="5" height="9" rx="1"/></svg></div>
+              <div class="c-text"><div class="c-label">Codeforces</div><div class="c-value">mehedihasanmonshe</div></div>
+            </a>
+          </div>
+
+          <div class="panel terminal">
+            <div class="term-head"><span></span><span></span><span></span></div>
+            <div class="term-line"><span class="prompt">guest@portfolio</span>:~$ whoami</div>
+            <div class="term-line">Md. Mahade Hasan</div>
+            <div class="term-line"><span class="prompt">guest@portfolio</span>:~$ cat status.json</div>
+            <div class="term-line">{</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="key">"role"</span>: <span class="val">"CSE Undergrad @ BUBT"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="key">"looking_for"</span>: <span class="val">"internships, research"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="key">"location"</span>: <span class="val">"Dhaka, Bangladesh"</span>,</div>
+            <div class="term-line">&nbsp;&nbsp;<span class="key">"status"</span>: <span class="val">"online"</span></div>
+            <div class="term-line">}</div>
+            <div class="term-line"><span class="prompt">guest@portfolio</span>:~$ <span class="caret"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      &copy; <span id="year"></span> Md. Mahade Hasan. Built with <span class="heart">♥</span> and a lot of coffee.
     </div>
-  </body>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
 </html>
